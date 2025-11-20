@@ -3,6 +3,7 @@ from Triangulo import Triangulo
 from Circulo import Circulo
 from Cuadrado import Cuadrado
 from Rectangulo import Rectangulo
+from Cilindro import Cilindro
 
 while True:
     print("-----------------MENU------------")
@@ -10,6 +11,7 @@ while True:
     print("circulo (2) ")
     print("cuadrado (3) ")
     print("rectangulo (4) ")
+    print("cilindro (5)")
     print("Cerrar (0) ")
 
     opcion = input("digite el numero de la figura que desea hallar el area: ")
@@ -31,6 +33,12 @@ while True:
         altura = float(input("digite la altura: "))
         re = Rectangulo(base,altura)
         print("El area del rectangulo es:",re.area())
+
+    elif opcion =="5":
+        radio2=float(input("digite el radio del cilindro:"))
+        altura2=float(input("digite la altura del cilindro:"))
+        cl= Cilindro(radio2,altura2)
+        print("al area del cilindro es:",cl.area)    
 
 
     else: 
