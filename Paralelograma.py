@@ -1,17 +1,17 @@
 from FiguraGeometrica import FiguraGeometrica
-from math import pi
-class Cilindro(FiguraGeometrica):
+
+class Paralelograma(FiguraGeometrica):
     def __init__(self, nombre):
         super().__init__(nombre)
 
 
     @property
-    def radio(self) -> float:
-        return self._radio
+    def base(self) -> float:
+        return self._base
     
-    @radio.setter
-    def radio(self,radio:float):
-        self._radio=radio
+    @base.setter
+    def base(self,base:float):
+        self._base=base
 
     @property
     def altura(self) -> float:
@@ -21,4 +21,4 @@ class Cilindro(FiguraGeometrica):
         self._altura=altura
     
     def area (self):
-        return 2*pi*self.radio*(self.radio+self.altura)
+        return self.base*(self.base+self.altura)
