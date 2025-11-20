@@ -6,6 +6,7 @@ from Rectangulo import Rectangulo
 from Cilindro import Cilindro
 from Paralelograma import Paralelograma
 from Trapecio import Trapecio
+from Rombo import Rombo
 
 while True:
     print("-----------------MENU------------")
@@ -16,6 +17,7 @@ while True:
     print("cilindro (5)")
     print("paralelograma (6)")
     print("trapecio (7)")
+    print("rombo (8)")
     print("Cerrar (0) ")
 
     opcion = input("digite el numero de la figura que desea hallar el area: ")
@@ -63,6 +65,15 @@ while True:
         tr.base_menor = base_menor
         tr.altura = altura
         print("El área del trapecio es:", tr.area())
+
+    elif opcion == "8":
+        diagonal_mayor = float(input("Digite la diagonal mayor del rombo: "))
+        diagonal_menor = float(input("Digite la diagonal menor del rombo: "))
+        r = Rombo("Rombo")
+        r.diagonal_mayor = diagonal_mayor
+        r.diagonal_menor = diagonal_menor
+        print("El área del rombo es:", r.area())
+    
 
     else: 
         opcion == "0"
