@@ -5,6 +5,7 @@ from Cuadrado import Cuadrado
 from Rectangulo import Rectangulo
 from Cilindro import Cilindro
 from Paralelograma import Paralelograma
+from Trapecio import Trapecio
 
 while True:
     print("-----------------MENU------------")
@@ -14,6 +15,7 @@ while True:
     print("rectangulo (4) ")
     print("cilindro (5)")
     print("paralelograma (6)")
+    print("trapecio (7)")
     print("Cerrar (0) ")
 
     opcion = input("digite el numero de la figura que desea hallar el area: ")
@@ -50,9 +52,19 @@ while True:
         pl= Paralelograma("paralelograma")
         pl.base=base
         pl.altura=altura
-        print("al area del paralelograma es:",pl.area())    
+        print("al area del paralelograma es:",pl.area())
+
+    elif opcion == "7":
+        base_mayor = float(input("Digite la base mayor del trapecio: "))
+        base_menor = float(input("Digite la base menor del trapecio: "))
+        altura = float(input("Digite la altura del trapecio: "))
+        tr = Trapecio("Trapecio")
+        tr.base_mayor = base_mayor
+        tr.base_menor = base_menor
+        tr.altura = altura
+        print("El área del trapecio es:", tr.area())
+
     else: 
         opcion == "0"
         print("fin del programa")
         break
-    
